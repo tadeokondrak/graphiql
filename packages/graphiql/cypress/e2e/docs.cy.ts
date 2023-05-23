@@ -38,9 +38,10 @@ describe('GraphiQL DocExplorer - search', () => {
     cy.get('[cmdk-item]').eq(4).children().click();
     cy.get('[cmdk-input]').type('list');
     cy.get('[cmdk-item]').should('have.length', 14);
-    cy.get(
-      '[cmdk-list] .graphiql-doc-explorer-search-divider',
-    ).should('have.text', 'Other results');
+    cy.get('[cmdk-list] .graphiql-doc-explorer-search-divider').should(
+      'have.text',
+      'Other results',
+    );
     cy.get('[cmdk-item]').contains('hasArgs');
   });
 
